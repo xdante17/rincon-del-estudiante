@@ -1,0 +1,363 @@
+:root {
+    --primary-color: #c79a66;
+    --background-color: #ffe6c7;
+    --dark-color: #151515;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: smaller;
+    padding-top: 100px; /* espacio para el header fijo */
+}
+
+/* ======= HEADER Y NAVEGACIÓN ======= */
+.main-header {
+    background-color: #ecb77c;
+    padding: 0px 0;
+    border-bottom: 1px solid #ccc;
+
+    /* Estilos para fijar el header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ======= BANNER ======= */
+.sobre-nosotros-banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url('images/sobreNosotros/sobrenosotros.jpeg'); /* Cambia por tu imagen real */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.contenido-sobre-nosotros {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+  border-radius: 12px;
+}
+
+.contenido-sobre-nosotros p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
+}
+
+.contenido-sobre-nosotros h2 {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contenido-sobre-nosotros .btn {
+  background-color: #000;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contenido-sobre-nosotros .btn:hover {
+  background-color: #5c4b47;
+  color: moccasin;
+}
+/* ===== NAV ===== */
+.main-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.Nav1,.btn-pedido {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.Nav1:hover,.btn-pedido:hover {
+    background-color: rgb(97, 79, 81);
+    color: moccasin;
+    padding: 12px 25px;
+    transition-duration: 1000ms;
+}
+
+.main-nav .nav-links li {
+    display: inline-block;
+}
+
+.main-nav .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+
+
+/* ===== BANNER SOBRE NOSOTROS ===== */
+.imageSobreNosotros {
+    position: relative;
+    width: 100%;
+}
+
+.imageSobreNosotros img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.textoEncima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ===== CONTENIDO DE SECCIONES ===== */
+.contenedorComoNacio,
+.contenedorNuestraHistoria,
+.contenedorFAQ {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+}
+
+.textoComoNacio h2,
+.textoNuestraHistoria h2,
+.textoFAQ h2 {
+    font-size: 1.8rem;
+    color: #b06d2c;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.textoComoNacio p,
+.textoNuestraHistoria p,
+.textoFAQ p {
+    font-size: 1.4rem;
+    font-family: 'Merriweather', serif;
+    color: #333;
+    text-align: justify;
+    background-color: #fff5e6;
+    padding: 15px 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+.textoComoNacio p:hover,
+.textoNuestraHistoria p:hover,
+.textoFAQ p:hover {
+    background-color: #ffedd5;
+}
+
+.textoComoNacio {
+    flex: 1 1 500px;
+    padding: 70px;
+}
+
+.textoNuestraHistoria {
+    flex: 1 1 500px;
+    padding: 20px;
+    margin-right: 80px;
+}
+
+.textoFAQ {
+    flex: 1 1 650px;
+    padding: 20px;
+    margin-left: 80px;
+}
+
+.imageComoNacio,
+.imageNuestraHistoria,
+.imageFAQ {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.imageComoNacio img,
+.imageNuestraHistoria img,
+.imageFAQ img {
+    max-width: 85%;
+    height: auto;
+    display: block;
+    border: 3px solid #d3a373;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.imageComoNacio img:hover,
+.imageNuestraHistoria img:hover,
+.imageFAQ img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--primary-color);
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 30rem;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.title-footer {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.contact-info,
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-info ul,
+.information ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info ul p,
+.information ul li {
+    list-style: none;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.information ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+.information ul li a:hover {
+    color: var(--dark-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-icons a i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.WhatsApp {
+    background-color: #007b00;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 2.5px solid #0c0c0c;
+}
+
+.copyright p {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.copyright img {
+    height: 2rem;
+}
